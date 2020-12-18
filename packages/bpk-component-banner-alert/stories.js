@@ -47,10 +47,40 @@ const BpkBannerAlertExpandableState = withBannerAlertState(
 
 storiesOf('bpk-component-banner-alert', module)
   .add('Neutral', () => (
-    <BpkBannerAlert message={message} type={ALERT_TYPES.NEUTRAL} />
+    <div>
+      <BpkBannerAlert message={message} type={ALERT_TYPES.NEUTRAL} />
+      <BpkBannerAlertDismissable
+        dismissButtonLabel="Dismiss"
+        message={message}
+        type={ALERT_TYPES.NEUTRAL}
+        onDismiss={action('dismissed')}
+      />
+      <BpkBannerAlertExpandable
+        message={message}
+        type={ALERT_TYPES.NEUTRAL}
+        toggleButtonLabel="View more"
+      >
+        {longMessage}
+      </BpkBannerAlertExpandable>
+    </div>
   ))
   .add('Primary', () => (
-    <BpkBannerAlert message={message} type={ALERT_TYPES.PRIMARY} />
+    <div>
+      <BpkBannerAlert message={message} type={ALERT_TYPES.PRIMARY} />
+      <BpkBannerAlertDismissable
+        dismissButtonLabel="Dismiss"
+        message={message}
+        type={ALERT_TYPES.PRIMARY}
+        onDismiss={action('dismissed')}
+      />
+      <BpkBannerAlertExpandable
+        message={message}
+        type={ALERT_TYPES.PRIMARY}
+        toggleButtonLabel="View more"
+      >
+        {longMessage}
+      </BpkBannerAlertExpandable>
+    </div>
   ))
   .add('Success', () => (
     <BpkBannerAlert message={message} type={ALERT_TYPES.SUCCESS} />
@@ -90,13 +120,58 @@ storiesOf('bpk-component-banner-alert', module)
     />
   ))
   .add('Warn', () => (
-    <BpkBannerAlert message={message} type={ALERT_TYPES.WARN} />
+    <div>
+      <BpkBannerAlert message={message} type={ALERT_TYPES.WARN} />
+      <BpkBannerAlertDismissable
+        dismissButtonLabel="Dismiss"
+        message={message}
+        type={ALERT_TYPES.WARN}
+        onDismiss={action('dismissed')}
+      />
+      <BpkBannerAlertExpandable
+        message={message}
+        type={ALERT_TYPES.WARN}
+        toggleButtonLabel="View more"
+      >
+        {longMessage}
+      </BpkBannerAlertExpandable>
+    </div>
   ))
   .add('Error', () => (
-    <BpkBannerAlert message={message} type={ALERT_TYPES.ERROR} />
+    <div>
+      <BpkBannerAlert message={message} type={ALERT_TYPES.ERROR} />
+      <BpkBannerAlertDismissable
+        dismissButtonLabel="Dismiss"
+        message={message}
+        type={ALERT_TYPES.ERROR}
+        onDismiss={action('dismissed')}
+      />
+      <BpkBannerAlertExpandable
+        message={message}
+        type={ALERT_TYPES.ERROR}
+        toggleButtonLabel="View more"
+      >
+        {longMessage}
+      </BpkBannerAlertExpandable>
+    </div>
   ))
   .add('Event', () => (
-    <BpkBannerAlert message={message} type={ALERT_TYPES.EVENT} />
+    <div>
+      <BpkBannerAlert message={message} type={ALERT_TYPES.EVENT} />
+      <BpkBannerAlertDismissable
+        dismissButtonLabel="Dismiss"
+        message={message}
+        type={ALERT_TYPES.EVENT}
+        onDismiss={action('dismissed')}
+      />
+      <BpkBannerAlertExpandable
+        message={message}
+        type={ALERT_TYPES.EVENT}
+        toggleButtonLabel="View more"
+      >
+        {longMessage}
+      </BpkBannerAlertExpandable>
+    </div>
   ))
   .add('Success (dismissable behaviour)', () => (
     <BpkBannerAlertDismissableState
@@ -128,4 +203,50 @@ storiesOf('bpk-component-banner-alert', module)
       type={ALERT_TYPES.SUCCESS}
       icon={CurrencyIcon}
     />
+  ))
+  .add('All expandable', () => (
+    <div>
+      <BpkBannerAlertExpandableState
+        message={message}
+        type={ALERT_TYPES.NEUTRAL}
+        toggleButtonLabel="View more"
+      >
+        {longMessage}
+      </BpkBannerAlertExpandableState>
+      <BpkBannerAlertExpandableState
+        message={message}
+        type={ALERT_TYPES.PRIMARY}
+        toggleButtonLabel="View more"
+      >
+        {longMessage}
+      </BpkBannerAlertExpandableState>
+      <BpkBannerAlertExpandableState
+        message={message}
+        type={ALERT_TYPES.SUCCESS}
+        toggleButtonLabel="View more"
+      >
+        {longMessage}
+      </BpkBannerAlertExpandableState>
+      <BpkBannerAlertExpandableState
+        message={message}
+        type={ALERT_TYPES.WARN}
+        toggleButtonLabel="View more"
+      >
+        {longMessage}
+      </BpkBannerAlertExpandableState>
+      <BpkBannerAlertExpandableState
+        message={message}
+        type={ALERT_TYPES.ERROR}
+        toggleButtonLabel="View more"
+      >
+        {longMessage}
+      </BpkBannerAlertExpandableState>
+      <BpkBannerAlertExpandableState
+        message={message}
+        type={ALERT_TYPES.EVENT}
+        toggleButtonLabel="View more"
+      >
+        {longMessage}
+      </BpkBannerAlertExpandableState>
+    </div>
   ));
