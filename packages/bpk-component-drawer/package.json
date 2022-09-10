@@ -22,7 +22,7 @@
     "bpk-react-utils": "^7.0.1",
     "bpk-scrim-utils": "^6.0.5",
     "prop-types": "^15.7.2",
-    "react-transition-group": "^2.5.3"
+    "react-transition-group": "^4.4.5"
   },
   "peerDependencies": {
     "react": "^17.0.2"
